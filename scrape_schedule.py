@@ -404,7 +404,7 @@ def build_week_tables(days_by_date, weekday_labels, weekday_short, date_fmt,
                     (lesson_fields(l) for l in lessons)
                 )
             else:
-                body = f'<div class="g-empty">{no_class_text}</div>'
+                body = ""
             cells.append(GRID_CELL.format(
                 weekday=weekday_short[i],
                 date_label=date_fmt(cell_date),
@@ -494,7 +494,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     padding: 24px 16px 60px;
     color: var(--text);
   }}
-  .wrap {{ max-width: 900px; margin: 0 auto; }}
+  .wrap {{ max-width: 1180px; margin: 0 auto; }}
 
   .header-row {{ position: relative; text-align: center; margin-bottom: 6px; }}
   h1 {{
@@ -537,6 +537,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     display: grid;
     grid-template-columns: repeat(6, minmax(140px, 1fr));
     background: var(--card);
+    width: 100%;
     min-width: 840px;
     border-radius: 14px;
     overflow: hidden;
@@ -566,7 +567,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .g-empty {{ font-size: 12px; color: var(--muted); font-style: italic; }}
 
   /* --- рубрика Us --- */
-  .us-section {{ text-align: center; margin: 36px 0 8px; }}
+  .us-section {{ text-align: center; margin: 8px 0 28px; }}
   .us-photo img {{
     max-width: 100%;
     width: 360px;
@@ -581,21 +582,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     color: var(--primary-dark);
     margin-top: 10px;
   }}
-  .us-message {{
-    font-family: "Dancing Script", cursive;
-    font-size: 21px;
-    color: var(--primary-dark);
-    margin: 16px auto 0;
-    max-width: 480px;
-    line-height: 1.4;
-  }}
 
   /* --- всплывающее уведомление --- */
   .notif-toast {{
     position: fixed;
     top: 18px;
-    left: 50%;
-    transform: translate(-50%, -140%);
+    right: 18px;
+    transform: translateY(-140%);
     background: linear-gradient(100deg, var(--primary), var(--primary-dark));
     color: #fff;
     padding: 13px 24px;
@@ -610,7 +603,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     max-width: 90%;
     text-align: center;
   }}
-  .notif-toast.show {{ transform: translate(-50%, 0); opacity: 1; }}
+  .notif-toast.show {{ transform: translateY(0); opacity: 1; }}
 
   @keyframes float-heart {{
     0%   {{ transform: translateY(0) rotate(0deg); opacity: 0.9; }}
@@ -663,17 +656,16 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   </div>
   <div class="meta">{period}<br>Обновлено на сайте: {updated_on_site}<br>Синхронизировано: {generated_at}</div>
 
+  <div class="us-section">
+    {photo_html}
+    <div class="us-caption">us</div>
+  </div>
+
   <div id="scheduleRu">
     {ru_grid}
   </div>
   <div id="scheduleEn" style="display:none">
     {en_grid}
-  </div>
-
-  <div class="us-section">
-    {photo_html}
-    <div class="us-caption">us</div>
-    <div class="us-message">Spend my whole life in love with Paulo ❤️</div>
   </div>
 </div>
 {photo_script}
