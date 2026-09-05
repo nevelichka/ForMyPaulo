@@ -1,127 +1,16 @@
 {
   "group": "ОЛИ-2431",
-  "period": "Расписание c 01 сентября по 11 сентября",
-  "updated_on_site": "Расписание обновлено 24.08.2026 в 17:36:00",
-  "generated_at": "2026-08-25 16:34:01",
+  "period": "Расписание c 05 сентября по 03 октября",
+  "updated_on_site": "Расписание обновлено 04.09.2026 в 17:36:34",
+  "generated_at": "2026-09-05 15:43:04",
   "days": [
-    {
-      "date": "01 сентября",
-      "weekday": "Вт",
-      "lessons": [
-        {
-          "time": "14:00 - 15:35",
-          "subject": "Педагогика (Лекции)",
-          "subject_en": "Pedagogy (Lecture)",
-          "room": "Учебная аудитория 1А ГУК",
-          "teacher": "Донгаузер Елена Викторовна",
-          "group": "ОЛИ-2431"
-        },
-        {
-          "time": "15:45 - 17:20",
-          "subject": "Технология и организация воспитательных практик (классное руководство) (Лекции)",
-          "subject_en": "Technology and Organization of Educational Practices (Classroom Management) (Lecture)",
-          "room": "Учебная аудитория 1Г ГУК",
-          "teacher": "Максимова Мария Олеговна",
-          "group": "ОЛИ-2431"
-        },
-        {
-          "time": "17:30 - 19:05",
-          "subject": "Научные основы обучения обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Лекции)",
-          "subject_en": "Scientific Foundations of Teaching Students with Intellectual Disabilities (Lecture)",
-          "room": "Учебная аудитория 118 ГУК",
-          "teacher": "Зак Галина Георгиевна",
-          "group": "ОЛИ-2431"
-        }
-      ]
-    },
-    {
-      "date": "02 сентября",
-      "weekday": "Ср",
-      "lessons": [
-        {
-          "time": "14:00 - 15:35",
-          "subject": "Научные основы образования дошкольников с умственной отсталостью (интеллектуальными нарушениями) (Лекции)",
-          "subject_en": "Scientific Foundations of Preschool Education for Children with Intellectual Disabilities (Lecture)",
-          "room": "Учебная аудитория 119 ГУК",
-          "teacher": "Труфанова Галина Константиновна",
-          "group": "ОЛИ-2431"
-        },
-        {
-          "time": "15:45 - 17:20",
-          "subject": "Общая физическая подготовка (Лаб.зан-я)",
-          "subject_en": "General Physical Training (Lab class)",
-          "room": "Физкультурное спортивное сооружение 5 ГУК",
-          "teacher": "Порсева Кристина Викторовна",
-          "group": "ОЛИ-2431"
-        },
-        {
-          "time": "17:30 - 19:05",
-          "subject": "Психология обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Лекции)",
-          "subject_en": "Psychology of Students with Intellectual Disabilities (Lecture)",
-          "room": "Учебная аудитория 118 ГУК",
-          "teacher": "Нугаева Ольга Георгиевна",
-          "group": "ОЛИ-2431"
-        }
-      ]
-    },
-    {
-      "date": "03 сентября",
-      "weekday": "Чт",
-      "lessons": [
-        {
-          "time": "14:00 - 15:35",
-          "subject": "История олигофренопедагогики (Лекции)",
-          "subject_en": "History of Special Education for Intellectual Disabilities (Lecture)",
-          "room": "Учебная аудитория 121 ГУК",
-          "teacher": "Максимова Мария Олеговна",
-          "group": "ОЛИ-2431"
-        },
-        {
-          "time": "15:45 - 17:20",
-          "subject": "Научные основы воспитания обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Лекции)",
-          "subject_en": "Scientific Foundations of Upbringing Students with Intellectual Disabilities (Lecture)",
-          "room": "Учебная аудитория 119 ГУК",
-          "teacher": "Максимова Мария Олеговна",
-          "group": "ОЛИ-2431"
-        },
-        {
-          "time": "17:30 - 19:05",
-          "subject": "Коррекционная работа с обучающимися с умственной отсталостью (интеллектуальными нарушениями) и расстройствами аутистического спектра (Лекции)",
-          "subject_en": "Correctional Work with Students with Intellectual Disabilities and Autism Spectrum Disorders (Lecture)",
-          "room": "Учебная аудитория 119 ГУК",
-          "teacher": "Максимова Мария Олеговна",
-          "group": "ОЛИ-2431"
-        }
-      ]
-    },
-    {
-      "date": "04 сентября",
-      "weekday": "Пт",
-      "lessons": [
-        {
-          "time": "15:45 - 17:20",
-          "subject": "Психология обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Практ.зан-я)",
-          "subject_en": "Psychology of Students with Intellectual Disabilities (Practical class)",
-          "room": "Учебная аудитория 154 ГУК",
-          "teacher": "Нугаева Ольга Георгиевна",
-          "group": "ОЛИ-2431"
-        },
-        {
-          "time": "17:30 - 19:05",
-          "subject": "Научные основы воспитания обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Практ.зан-я)",
-          "subject_en": "Scientific Foundations of Upbringing Students with Intellectual Disabilities (Practical class)",
-          "room": "Учебная аудитория 119 ГУК",
-          "teacher": "Козик Татьяна Владимировна",
-          "group": "ОЛИ-2431"
-        }
-      ]
-    },
     {
       "date": "05 сентября",
       "weekday": "Сб",
+      "date_iso": "2026-09-05",
       "lessons": [
         {
-          "time": "08:30 - 10:05",
+          "time": "08:30 - 10:00",
           "subject": "Методы количественного и качественного анализа данных (Лекции)",
           "subject_en": "Methods of Quantitative and Qualitative Data Analysis (Lecture)",
           "room": "онлайн-курс",
@@ -129,18 +18,18 @@
           "group": "ОЛИ-2431"
         },
         {
-          "time": "10:15 - 11:50",
+          "time": "10:15 - 11:45",
           "subject": "Основы государственной политики в сфере межэтнических и межконфессиональных отношений (Лекции)",
           "subject_en": "Fundamentals of State Policy on Interethnic and Interfaith Relations (Lecture)",
-          "room": "онлайн-курс",
+          "room": "Перейти",
           "teacher": "Порозов Роман Юрьевич",
           "group": "ОЛИ-2431"
         },
         {
-          "time": "12:00 - 13:35",
+          "time": "12:30 - 14:00",
           "subject": "Основы государственной политики в сфере межэтнических и межконфессиональных отношений (Лекции)",
           "subject_en": "Fundamentals of State Policy on Interethnic and Interfaith Relations (Lecture)",
-          "room": "онлайн-курс",
+          "room": "Перейти",
           "teacher": "Порозов Роман Юрьевич",
           "group": "ОЛИ-2431"
         }
@@ -149,9 +38,10 @@
     {
       "date": "07 сентября",
       "weekday": "Пн",
+      "date_iso": "2026-09-07",
       "lessons": [
         {
-          "time": "12:00 - 13:35",
+          "time": "12:00 - 13:30",
           "subject": "Технология и организация воспитательных практик (классное руководство) (Практ.зан-я)",
           "subject_en": "Technology and Organization of Educational Practices (Classroom Management) (Practical class)",
           "room": "Учебная аудитория 255 ГУК",
@@ -159,7 +49,7 @@
           "group": "ОЛИ-2431"
         },
         {
-          "time": "14:00 - 15:35",
+          "time": "14:15 - 15:45",
           "subject": "Общая физическая подготовка (Лаб.зан-я)",
           "subject_en": "General Physical Training (Lab class)",
           "room": "Физкультурное спортивное сооружение 6 ГУК",
@@ -171,9 +61,10 @@
     {
       "date": "08 сентября",
       "weekday": "Вт",
+      "date_iso": "2026-09-08",
       "lessons": [
         {
-          "time": "12:00 - 13:35",
+          "time": "12:00 - 13:30",
           "subject": "Педагогика (Лекции)",
           "subject_en": "Pedagogy (Lecture)",
           "room": "Учебная аудитория 3А ГУК",
@@ -181,7 +72,7 @@
           "group": "ОЛИ-2431"
         },
         {
-          "time": "14:00 - 15:35",
+          "time": "14:15 - 15:45",
           "subject": "Технология и организация воспитательных практик (классное руководство) (Лекции)",
           "subject_en": "Technology and Organization of Educational Practices (Classroom Management) (Lecture)",
           "room": "Учебная аудитория 1Г ГУК",
@@ -189,7 +80,7 @@
           "group": "ОЛИ-2431"
         },
         {
-          "time": "15:45 - 17:20",
+          "time": "16:00 - 17:30",
           "subject": "Научные основы образования дошкольников с умственной отсталостью (интеллектуальными нарушениями) (Практ.зан-я)",
           "subject_en": "Scientific Foundations of Preschool Education for Children with Intellectual Disabilities (Practical class)",
           "room": "Учебная аудитория 114 ГУК",
@@ -197,7 +88,7 @@
           "group": "ОЛИ-2431"
         },
         {
-          "time": "17:30 - 19:05",
+          "time": "17:45 - 19:15",
           "subject": "Научные основы воспитания обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Практ.зан-я)",
           "subject_en": "Scientific Foundations of Upbringing Students with Intellectual Disabilities (Practical class)",
           "room": "Учебная аудитория 119 ГУК",
@@ -209,9 +100,10 @@
     {
       "date": "10 сентября",
       "weekday": "Чт",
+      "date_iso": "2026-09-10",
       "lessons": [
         {
-          "time": "12:00 - 13:35",
+          "time": "12:00 - 13:30",
           "subject": "Общая физическая подготовка (Лаб.зан-я)",
           "subject_en": "General Physical Training (Lab class)",
           "room": "Физкультурное спортивное сооружение 5 ГУК",
@@ -219,7 +111,7 @@
           "group": "ОЛИ-2431"
         },
         {
-          "time": "14:00 - 15:35",
+          "time": "14:15 - 15:45",
           "subject": "Технология и организация воспитательных практик (классное руководство) (Практ.зан-я)",
           "subject_en": "Technology and Organization of Educational Practices (Classroom Management) (Practical class)",
           "room": "Компьютерный класс 161 ГУК",
@@ -227,7 +119,7 @@
           "group": "ОЛИ-2431"
         },
         {
-          "time": "15:45 - 17:20",
+          "time": "16:00 - 17:30",
           "subject": "Психология обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Практ.зан-я)",
           "subject_en": "Psychology of Students with Intellectual Disabilities (Practical class)",
           "room": "Учебная аудитория 117 ГУК",
@@ -235,7 +127,7 @@
           "group": "ОЛИ-2431"
         },
         {
-          "time": "17:30 - 19:05",
+          "time": "17:45 - 19:15",
           "subject": "Коррекционная работа с обучающимися с умственной отсталостью (интеллектуальными нарушениями) и расстройствами аутистического спектра (Практ.зан-я)",
           "subject_en": "Correctional Work with Students with Intellectual Disabilities and Autism Spectrum Disorders (Practical class)",
           "room": "Учебная аудитория 117 ГУК",
@@ -247,29 +139,517 @@
     {
       "date": "11 сентября",
       "weekday": "Пт",
+      "date_iso": "2026-09-11",
       "lessons": [
         {
-          "time": "12:00 - 13:35",
+          "time": "12:00 - 13:30",
           "subject": "Научные основы обучения обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Практ.зан-я)",
           "subject_en": "Scientific Foundations of Teaching Students with Intellectual Disabilities (Practical class)",
-          "room": "Учебная аудитория 115 ГУК",
+          "room": "Учебная аудитория 119 ГУК",
           "teacher": "Козик Татьяна Владимировна",
           "group": "ОЛИ-2431"
         },
         {
-          "time": "14:00 - 15:35",
+          "time": "14:15 - 15:45",
           "subject": "Педагогика (Практ.зан-я)",
           "subject_en": "Pedagogy (Practical class)",
-          "room": "Компьютерный класс 151 ГУК",
+          "room": "Учебная аудитория 422 ГУК",
           "teacher": "Донгаузер Елена Викторовна",
           "group": "ОЛИ-2431"
         },
         {
-          "time": "15:45 - 17:20",
+          "time": "16:00 - 17:30",
           "subject": "История олигофренопедагогики (Практ.зан-я)",
           "subject_en": "History of Special Education for Intellectual Disabilities (Practical class)",
           "room": "Учебная аудитория 114 ГУК",
           "teacher": "Козик Татьяна Владимировна",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "14 сентября",
+      "weekday": "Пн",
+      "date_iso": "2026-09-14",
+      "lessons": [
+        {
+          "time": "16:00 - 17:30",
+          "subject": "Научные основы образования дошкольников с умственной отсталостью (интеллектуальными нарушениями) (Практ.зан-я)",
+          "subject_en": "Scientific Foundations of Preschool Education for Children with Intellectual Disabilities (Practical class)",
+          "room": "Учебная аудитория 121 ГУК",
+          "teacher": "Козик Татьяна Владимировна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "17:45 - 19:15",
+          "subject": "История олигофренопедагогики (Практ.зан-я)",
+          "subject_en": "History of Special Education for Intellectual Disabilities (Practical class)",
+          "room": "Учебная аудитория 121 ГУК",
+          "teacher": "Козик Татьяна Владимировна",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "15 сентября",
+      "weekday": "Вт",
+      "date_iso": "2026-09-15",
+      "lessons": [
+        {
+          "time": "14:15 - 15:45",
+          "subject": "Педагогика (Лекции)",
+          "subject_en": "Pedagogy (Lecture)",
+          "room": "Учебная аудитория 3А ГУК",
+          "teacher": "Донгаузер Елена Викторовна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "16:00 - 17:30",
+          "subject": "Технология и организация воспитательных практик (классное руководство) (Лекции)",
+          "subject_en": "Technology and Organization of Educational Practices (Classroom Management) (Lecture)",
+          "room": "Учебная аудитория 1Г ГУК",
+          "teacher": "Максимова Мария Олеговна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "17:45 - 19:15",
+          "subject": "Научные основы обучения обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Лекции)",
+          "subject_en": "Scientific Foundations of Teaching Students with Intellectual Disabilities (Lecture)",
+          "room": "Учебная аудитория 118 ГУК",
+          "teacher": "Зак Галина Георгиевна",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "16 сентября",
+      "weekday": "Ср",
+      "date_iso": "2026-09-16",
+      "lessons": [
+        {
+          "time": "14:15 - 15:45",
+          "subject": "Научные основы образования дошкольников с умственной отсталостью (интеллектуальными нарушениями) (Лекции)",
+          "subject_en": "Scientific Foundations of Preschool Education for Children with Intellectual Disabilities (Lecture)",
+          "room": "Учебная аудитория 119 ГУК",
+          "teacher": "Труфанова Галина Константиновна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "16:00 - 17:30",
+          "subject": "Общая физическая подготовка (Лаб.зан-я)",
+          "subject_en": "General Physical Training (Lab class)",
+          "room": "Физкультурное спортивное сооружение 5 ГУК",
+          "teacher": "Порсева Кристина Викторовна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "17:45 - 19:15",
+          "subject": "Психология обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Лекции)",
+          "subject_en": "Psychology of Students with Intellectual Disabilities (Lecture)",
+          "room": "Учебная аудитория 118 ГУК",
+          "teacher": "Нугаева Ольга Георгиевна",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "17 сентября",
+      "weekday": "Чт",
+      "date_iso": "2026-09-17",
+      "lessons": [
+        {
+          "time": "14:15 - 15:45",
+          "subject": "История олигофренопедагогики (Лекции)",
+          "subject_en": "History of Special Education for Intellectual Disabilities (Lecture)",
+          "room": "Учебная аудитория 121 ГУК",
+          "teacher": "Максимова Мария Олеговна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "16:00 - 17:30",
+          "subject": "Научные основы воспитания обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Лекции)",
+          "subject_en": "Scientific Foundations of Upbringing Students with Intellectual Disabilities (Lecture)",
+          "room": "Учебная аудитория 119 ГУК",
+          "teacher": "Максимова Мария Олеговна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "17:45 - 19:15",
+          "subject": "Коррекционная работа с обучающимися с умственной отсталостью (интеллектуальными нарушениями) и расстройствами аутистического спектра (Лекции)",
+          "subject_en": "Correctional Work with Students with Intellectual Disabilities and Autism Spectrum Disorders (Lecture)",
+          "room": "Учебная аудитория 119 ГУК",
+          "teacher": "Максимова Мария Олеговна",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "18 сентября",
+      "weekday": "Пт",
+      "date_iso": "2026-09-18",
+      "lessons": [
+        {
+          "time": "16:00 - 17:30",
+          "subject": "Психология обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Практ.зан-я)",
+          "subject_en": "Psychology of Students with Intellectual Disabilities (Practical class)",
+          "room": "Учебная аудитория 154 ГУК",
+          "teacher": "Нугаева Ольга Георгиевна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "17:45 - 19:15",
+          "subject": "Научные основы воспитания обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Практ.зан-я)",
+          "subject_en": "Scientific Foundations of Upbringing Students with Intellectual Disabilities (Practical class)",
+          "room": "Учебная аудитория 119 ГУК",
+          "teacher": "Козик Татьяна Владимировна",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "19 сентября",
+      "weekday": "Сб",
+      "date_iso": "2026-09-19",
+      "lessons": [
+        {
+          "time": "08:30 - 10:00",
+          "subject": "Методы количественного и качественного анализа данных (Лекции)",
+          "subject_en": "Methods of Quantitative and Qualitative Data Analysis (Lecture)",
+          "room": "онлайн-курс",
+          "teacher": "Матвеева Елена Петровна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "10:15 - 11:45",
+          "subject": "Основы государственной политики в сфере межэтнических и межконфессиональных отношений (Лекции)",
+          "subject_en": "Fundamentals of State Policy on Interethnic and Interfaith Relations (Lecture)",
+          "room": "онлайн-курс",
+          "teacher": "Порозов Роман Юрьевич",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "12:30 - 14:00",
+          "subject": "Основы государственной политики в сфере межэтнических и межконфессиональных отношений (Лекции)",
+          "subject_en": "Fundamentals of State Policy on Interethnic and Interfaith Relations (Lecture)",
+          "room": "онлайн-курс",
+          "teacher": "Порозов Роман Юрьевич",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "21 сентября",
+      "weekday": "Пн",
+      "date_iso": "2026-09-21",
+      "lessons": [
+        {
+          "time": "12:00 - 13:30",
+          "subject": "Технология и организация воспитательных практик (классное руководство) (Практ.зан-я)",
+          "subject_en": "Technology and Organization of Educational Practices (Classroom Management) (Practical class)",
+          "room": "Учебная аудитория 255 ГУК",
+          "teacher": "Козик Татьяна Владимировна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "14:15 - 15:45",
+          "subject": "Общая физическая подготовка (Лаб.зан-я)",
+          "subject_en": "General Physical Training (Lab class)",
+          "room": "Физкультурное спортивное сооружение 6 ГУК",
+          "teacher": "Порсева Кристина Викторовна",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "22 сентября",
+      "weekday": "Вт",
+      "date_iso": "2026-09-22",
+      "lessons": [
+        {
+          "time": "12:00 - 13:30",
+          "subject": "Педагогика (Лекции)",
+          "subject_en": "Pedagogy (Lecture)",
+          "room": "Учебная аудитория 3А ГУК",
+          "teacher": "Донгаузер Елена Викторовна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "14:15 - 15:45",
+          "subject": "Технология и организация воспитательных практик (классное руководство) (Лекции)",
+          "subject_en": "Technology and Organization of Educational Practices (Classroom Management) (Lecture)",
+          "room": "Учебная аудитория 1Г ГУК",
+          "teacher": "Максимова Мария Олеговна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "16:00 - 17:30",
+          "subject": "Научные основы образования дошкольников с умственной отсталостью (интеллектуальными нарушениями) (Практ.зан-я)",
+          "subject_en": "Scientific Foundations of Preschool Education for Children with Intellectual Disabilities (Practical class)",
+          "room": "Учебная аудитория 114 ГУК",
+          "teacher": "Козик Татьяна Владимировна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "17:45 - 19:15",
+          "subject": "Научные основы воспитания обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Практ.зан-я)",
+          "subject_en": "Scientific Foundations of Upbringing Students with Intellectual Disabilities (Practical class)",
+          "room": "Учебная аудитория 119 ГУК",
+          "teacher": "Козик Татьяна Владимировна",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "24 сентября",
+      "weekday": "Чт",
+      "date_iso": "2026-09-24",
+      "lessons": [
+        {
+          "time": "12:00 - 13:30",
+          "subject": "Общая физическая подготовка (Лаб.зан-я)",
+          "subject_en": "General Physical Training (Lab class)",
+          "room": "Физкультурное спортивное сооружение 5 ГУК",
+          "teacher": "Порсева Кристина Викторовна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "14:15 - 15:45",
+          "subject": "Технология и организация воспитательных практик (классное руководство) (Практ.зан-я)",
+          "subject_en": "Technology and Organization of Educational Practices (Classroom Management) (Practical class)",
+          "room": "Компьютерный класс 161 ГУК",
+          "teacher": "Козик Татьяна Владимировна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "16:00 - 17:30",
+          "subject": "Психология обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Практ.зан-я)",
+          "subject_en": "Psychology of Students with Intellectual Disabilities (Practical class)",
+          "room": "Учебная аудитория 117 ГУК",
+          "teacher": "Нугаева Ольга Георгиевна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "17:45 - 19:15",
+          "subject": "Коррекционная работа с обучающимися с умственной отсталостью (интеллектуальными нарушениями) и расстройствами аутистического спектра (Практ.зан-я)",
+          "subject_en": "Correctional Work with Students with Intellectual Disabilities and Autism Spectrum Disorders (Practical class)",
+          "room": "Учебная аудитория 117 ГУК",
+          "teacher": "Козик Татьяна Владимировна",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "25 сентября",
+      "weekday": "Пт",
+      "date_iso": "2026-09-25",
+      "lessons": [
+        {
+          "time": "12:00 - 13:30",
+          "subject": "Научные основы обучения обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Практ.зан-я)",
+          "subject_en": "Scientific Foundations of Teaching Students with Intellectual Disabilities (Practical class)",
+          "room": "Учебная аудитория 119 ГУК",
+          "teacher": "Козик Татьяна Владимировна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "14:15 - 15:45",
+          "subject": "Педагогика (Практ.зан-я)",
+          "subject_en": "Pedagogy (Practical class)",
+          "room": "Учебная аудитория 420 ГУК",
+          "teacher": "Донгаузер Елена Викторовна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "16:00 - 17:30",
+          "subject": "История олигофренопедагогики (Практ.зан-я)",
+          "subject_en": "History of Special Education for Intellectual Disabilities (Practical class)",
+          "room": "Учебная аудитория 114 ГУК",
+          "teacher": "Козик Татьяна Владимировна",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "26 сентября",
+      "weekday": "Сб",
+      "date_iso": "2026-09-26",
+      "lessons": [
+        {
+          "time": "12:00 - 13:30",
+          "subject": "Основы государственной политики в сфере межэтнических и межконфессиональных отношений (Практ.зан-я)",
+          "subject_en": "Fundamentals of State Policy on Interethnic and Interfaith Relations (Practical class)",
+          "room": "онлайн-курс",
+          "teacher": "Достовалова А.С.",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "28 сентября",
+      "weekday": "Пн",
+      "date_iso": "2026-09-28",
+      "lessons": [
+        {
+          "time": "16:00 - 17:30",
+          "subject": "Научные основы образования дошкольников с умственной отсталостью (интеллектуальными нарушениями) (Практ.зан-я)",
+          "subject_en": "Scientific Foundations of Preschool Education for Children with Intellectual Disabilities (Practical class)",
+          "room": "Учебная аудитория 121 ГУК",
+          "teacher": "Козик Татьяна Владимировна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "17:45 - 19:15",
+          "subject": "История олигофренопедагогики (Практ.зан-я)",
+          "subject_en": "History of Special Education for Intellectual Disabilities (Practical class)",
+          "room": "Учебная аудитория 121 ГУК",
+          "teacher": "Козик Татьяна Владимировна",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "29 сентября",
+      "weekday": "Вт",
+      "date_iso": "2026-09-29",
+      "lessons": [
+        {
+          "time": "14:15 - 15:45",
+          "subject": "Педагогика (Лекции)",
+          "subject_en": "Pedagogy (Lecture)",
+          "room": "Учебная аудитория 3А ГУК",
+          "teacher": "Донгаузер Елена Викторовна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "16:00 - 17:30",
+          "subject": "Технология и организация воспитательных практик (классное руководство) (Лекции)",
+          "subject_en": "Technology and Organization of Educational Practices (Classroom Management) (Lecture)",
+          "room": "Учебная аудитория 1Г ГУК",
+          "teacher": "Максимова Мария Олеговна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "17:45 - 19:15",
+          "subject": "Научные основы обучения обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Лекции)",
+          "subject_en": "Scientific Foundations of Teaching Students with Intellectual Disabilities (Lecture)",
+          "room": "Учебная аудитория 118 ГУК",
+          "teacher": "Зак Галина Георгиевна",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "30 сентября",
+      "weekday": "Ср",
+      "date_iso": "2026-09-30",
+      "lessons": [
+        {
+          "time": "14:15 - 15:45",
+          "subject": "Научные основы образования дошкольников с умственной отсталостью (интеллектуальными нарушениями) (Лекции)",
+          "subject_en": "Scientific Foundations of Preschool Education for Children with Intellectual Disabilities (Lecture)",
+          "room": "Учебная аудитория 119 ГУК",
+          "teacher": "Труфанова Галина Константиновна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "16:00 - 17:30",
+          "subject": "Общая физическая подготовка (Лаб.зан-я)",
+          "subject_en": "General Physical Training (Lab class)",
+          "room": "Физкультурное спортивное сооружение 5 ГУК",
+          "teacher": "Порсева Кристина Викторовна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "17:45 - 19:15",
+          "subject": "Психология обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Лекции)",
+          "subject_en": "Psychology of Students with Intellectual Disabilities (Lecture)",
+          "room": "Учебная аудитория 118 ГУК",
+          "teacher": "Нугаева Ольга Георгиевна",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "01 октября",
+      "weekday": "Чт",
+      "date_iso": "2026-10-01",
+      "lessons": [
+        {
+          "time": "14:15 - 15:45",
+          "subject": "История олигофренопедагогики (Лекции)",
+          "subject_en": "History of Special Education for Intellectual Disabilities (Lecture)",
+          "room": "Учебная аудитория 121 ГУК",
+          "teacher": "Максимова Мария Олеговна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "16:00 - 17:30",
+          "subject": "Научные основы воспитания обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Лекции)",
+          "subject_en": "Scientific Foundations of Upbringing Students with Intellectual Disabilities (Lecture)",
+          "room": "Учебная аудитория 119 ГУК",
+          "teacher": "Максимова Мария Олеговна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "17:45 - 19:15",
+          "subject": "Коррекционная работа с обучающимися с умственной отсталостью (интеллектуальными нарушениями) и расстройствами аутистического спектра (Лекции)",
+          "subject_en": "Correctional Work with Students with Intellectual Disabilities and Autism Spectrum Disorders (Lecture)",
+          "room": "Учебная аудитория 119 ГУК",
+          "teacher": "Максимова Мария Олеговна",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "02 октября",
+      "weekday": "Пт",
+      "date_iso": "2026-10-02",
+      "lessons": [
+        {
+          "time": "16:00 - 17:30",
+          "subject": "Психология обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Практ.зан-я)",
+          "subject_en": "Psychology of Students with Intellectual Disabilities (Practical class)",
+          "room": "Учебная аудитория 154 ГУК",
+          "teacher": "Нугаева Ольга Георгиевна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "17:45 - 19:15",
+          "subject": "Научные основы воспитания обучающихся с умственной отсталостью (интеллектуальными нарушениями) (Практ.зан-я)",
+          "subject_en": "Scientific Foundations of Upbringing Students with Intellectual Disabilities (Practical class)",
+          "room": "Учебная аудитория 119 ГУК",
+          "teacher": "Козик Татьяна Владимировна",
+          "group": "ОЛИ-2431"
+        }
+      ]
+    },
+    {
+      "date": "03 октября",
+      "weekday": "Сб",
+      "date_iso": "2026-10-03",
+      "lessons": [
+        {
+          "time": "08:30 - 10:00",
+          "subject": "Методы количественного и качественного анализа данных (Лекции)",
+          "subject_en": "Methods of Quantitative and Qualitative Data Analysis (Lecture)",
+          "room": "онлайн-курс",
+          "teacher": "Матвеева Елена Петровна",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "10:15 - 11:45",
+          "subject": "Основы государственной политики в сфере межэтнических и межконфессиональных отношений (Лекции)",
+          "subject_en": "Fundamentals of State Policy on Interethnic and Interfaith Relations (Lecture)",
+          "room": "онлайн-курс",
+          "teacher": "Порозов Роман Юрьевич",
+          "group": "ОЛИ-2431"
+        },
+        {
+          "time": "12:30 - 14:00",
+          "subject": "Основы государственной политики в сфере межэтнических и межконфессиональных отношений (Лекции)",
+          "subject_en": "Fundamentals of State Policy on Interethnic and Interfaith Relations (Lecture)",
+          "room": "онлайн-курс",
+          "teacher": "Порозов Роман Юрьевич",
           "group": "ОЛИ-2431"
         }
       ]
