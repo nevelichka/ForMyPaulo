@@ -1,0 +1,79 @@
+
+; /* Start:"a:4:{s:4:"full";s:34:"/employee/script.js?14881958651555";s:6:"source";s:19:"/employee/script.js";s:3:"min";s:0:"";s:3:"map";s:0:"";}"*/
+$(document).ready(function(){
+		$(".hover-uspu").hover(
+			function(){
+				var item = $(this);
+				$(".uspu-box>.red",this).css("border-bottom","2px solid #da251d");
+				$(".uspu-box>.red",this).css("color","#da251d");
+	$(".uspu-box img",this).css("background-color","#da251d");
+				return false; 
+			},
+			function(){ 
+				var item = $(this);
+				$(".uspu-box>.red",this).css("border-bottom","2px solid #872b44");
+				$(".uspu-box>.red",this).css("color","#872b44");
+	$(".uspu-box img",this).css("background-color","#872b44");
+				return false; 
+		});
+		$('.popup-with-zoom-anim').magnificPopup({
+			type: 'inline',
+
+			fixedContentPos: false,
+			fixedBgPos: true,
+
+			overflowY: 'auto',
+
+			closeBtnInside: true,
+			preloader: false,
+			
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in'
+		});
+		
+
+	$(function() {
+     
+    	$('#carousel').carouFredSel({
+    		responsive: true,
+    		scroll: 1,
+    		items: {
+    			width: 300,
+			height: 500,
+    			visible: {
+    				min: 3,
+    				max: 4
+    			}
+    		},
+		//start : ranodom,
+		prev: {
+			button: '#uspuSliderPrev',
+			items: 3
+		},
+		next: {
+			button: '#uspuSliderNext',
+			items: 3
+		},
+		infinite	: true,
+		scroll : {
+		    items           :  2,
+		    easing  	    : "swing",
+		    duration        : 1000,
+		    pauseOnHover    : true
+		},
+		auto: {
+			items: 2,
+			easing: 'linear',
+			duration: 1250,
+			timeoutDuration: 1000
+		},
+		swipe: {
+		    onTouch: true
+		}
+    	});
+     
+    });
+	});
+/* End */
+;; /* /employee/script.js?14881958651555*/

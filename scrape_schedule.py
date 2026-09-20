@@ -103,16 +103,16 @@ def find_photos() -> list[tuple[str, float]]:
 # вероятностью. Хотите поменять/добавить фразу — просто отредактируйте
 # список (кавычки и запятые обязательны).
 NOTIF_PHRASES = [
-    "I love you.",
-    "Hey there, handsome.",
-    "Have a great day, my love.",
-    "You are my treasure.",
-    "I'm thinking about you right now.",
-    "I miss you.",
-    "Muah!",
-    "I want to eat you up.",
+    "I love you",
+    "Hey there, handsome",
+    "Have a great day, my love",
+    "You are my treasure",
+    "I'm thinking about you right now",
+    "I miss you",
+    "Muah! \U0001F618",
+    "I want to eat you up",
     "This is for you \U0001F339",
-    "Thank you for being in my life.",
+    "Thank you for being in my life",
 ]
 
 
@@ -587,7 +587,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .notif-toast {{
     position: fixed;
     top: 18px;
-    right: 18px;
+    left: 18px;
     transform: translateY(-140%);
     background: linear-gradient(100deg, var(--primary), var(--primary-dark));
     color: #fff;

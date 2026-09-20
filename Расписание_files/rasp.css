@@ -1,0 +1,513 @@
+.datepicker-rasp .ui-datepicker-inline {
+    display: none !important;
+}
+.datepicker:after {
+    content: 'Применить';
+    display: block;
+    width: 100%;
+    height: 30px;
+    background: #294099;
+    position: absolute;
+    bottom: -30px;
+    left: 0px;
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    pointer-events: none;
+    cursor: pointer;
+}
+.datepicker--cell.-in-range- {
+    background: none;
+}
+
+.rasp-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+.rasp-row.r-filtr {
+    justify-content: flex-start;
+}
+.rasp-tab {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-right: auto;
+}
+.rasp-tab span {
+	background: #d9dff2;
+	color: #294099;
+	cursor: pointer;
+	font-size: 22px;
+	margin-right: 20px;
+	padding: 10px 20px;
+	min-width: 220px;
+    transition: 0.2s;
+    text-align: center;
+}
+.rasp-tab span:hover, .rasp-tab span.selected {
+	background: #294099;
+	color: #fff;
+}
+.datepicker-rasp {
+	background: #e4c3cc;
+	color: #294099;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 5px 20px;
+	min-width: 220px;
+	transition: 0.2s;
+	text-align: center;
+}
+.dat {
+	min-width: 158px;
+	flex-shrink: 1;
+    margin-top: 14px;
+    position: relative;
+    max-width: 260px;
+}
+.datepicker-rasp:hover {
+	background: #872b44;
+	color: #fff;
+}
+.r-filtr {
+    justify-content: space-between;
+    padding: 24px 0 32px;
+    margin: 0 -10px;
+}
+.r-filtr label {
+    /*flex-grow: 1;
+    max-width: 270px;*/
+    margin: 0 10px 10px;
+    width: calc(25% - 20px);
+}
+.r-filtr label.label-lg {
+    width: calc(50% - 20px);
+}
+@media (max-width: 950px) {
+    .r-filtr label {
+    	width: calc(50% - 20px);
+    }
+}
+@media (max-width: 650px) {
+    .r-filtr label.label-lg {
+    	width: calc(100% - 20px);
+    }
+}
+@media (max-width: 460px) {
+    .r-filtr label {
+    	width: calc(100% - 20px);
+    }
+}
+.r-filtr label:last-child {
+    /*margin-right: 0px;*/
+}
+.r-filtr label:nth-last-child(2) {
+    /*max-width: 70px;*/
+}
+.r-filtr label.checkbox {
+    margin-top: 20px;
+    cursor: pointer;
+}
+.r-filtr label input[type=checkbox] {
+    margin: 0 10px 0 0;
+}
+.r-filtr label > span {
+    color: #2e4190;
+    font-size: 16px;
+    display: block;
+}
+.r-filtr .jq-selectbox {
+    width: 100%;
+}
+.r-filtr .jq-selectbox__select {
+	height: 32px;
+	padding: 0 45px 0 10px;
+	border: 1px solid #b5b5b5;
+	border-radius: 0px;
+	background: #FFF;
+	box-shadow: none;
+	font: 16px/32px Arial, sans-serif;
+	color: #000;
+	text-shadow: none;
+}
+.r-filtr label:first-child .jq-selectbox__select {
+    color: #b5b5b5;
+}
+.r-filtr label:first-child .changed .jq-selectbox__select {
+	color: #000;
+}
+.r-filtr .jq-selectbox__select:hover {
+	background: #FFF;
+}
+.r-filtr .jq-selectbox__trigger {
+	border-left: none;
+    width: 16px;
+}
+.r-filtr .jq-selectbox__trigger-arrow {
+	position: absolute;
+	top: 10px;
+	right: 12px;
+	width: 8px;
+	height: 8px;
+    border-top: none;
+    border-left: none;
+    border-right: 1px solid #294099;
+    border-bottom: 1px solid #294099;
+    transform: rotate(45deg);
+    transition: 0.2s;
+}
+.r-filtr .jq-selectbox__dropdown {
+    border-radius: 0px; width: 100% !important
+}
+
+.jq-selectbox__dropdown ul { overflow-y: auto !important; padding: 5px !important }
+.jq-selectbox__dropdown ul li { padding: 2px 0 4px 0 !important }
+
+.r-filtr .jq-selectbox__dropdown ul {
+    list-style: none;
+}
+.r-filtr .jq-selectbox__dropdown li {
+    padding: 10px;
+    font-size: 16px;
+}
+.r-filtr .jq-selectbox__dropdown li:hover, .r-filtr .jq-selectbox__dropdown li.sel {
+    color: #294099;
+}
+.r-filtr .jq-selectbox__dropdown ul {
+    list-style: none;
+    max-height: 352px;
+}
+.r-filtr .jq-selectbox__dropdown li:empty {
+    display: none !important;
+}
+.r-filtr .jq-selectbox__dropdown li:before {
+    display: none;
+}
+.rasp-zag {
+    color: #294099;
+    font-family: 'PT Sans',sans-serif;
+    font-size: 32px;
+    padding-bottom: 0px;
+    margin-right: auto;
+    line-height: 32px;
+}
+.rasp-zag br {
+    display: none;
+}
+.pechat {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url(print.png) center center no-repeat;
+	float: right;
+	cursor: pointer;
+    transition: 0.2s;
+}
+.pechat:hover {
+    filter: brightness(0.8);
+}
+.rasp-list {
+    padding: 24px 0px;
+}
+.rasp-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+.rasp-day {
+    width: 100%;
+    color: #294099;
+    font-size: 14px;
+    font-weight: 600;
+}
+.rasp-descr {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.rasp-week {
+    width: 80px;
+    background: #294099;
+    color: #fff;
+    font-size: 32px;
+    padding: 16px 20px;
+    min-height: 80px;
+}
+.rasp-item-inner {
+    background: #ebedec;
+    color: #294099;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(100% - 80px);
+    flex-grow: 1;
+    padding: 10px 16px 16px 64px;
+    min-height: 80px;
+	counter-reset: list;
+}
+.rasp-para {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.rasp-para:last-child {
+    margin-bottom: 0px;
+}
+.para-time {
+    font-size: 20px;
+    padding-right: 80px;
+}
+.rasp-desc p {
+    padding-bottom: 0px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    position: relative;
+}
+.rasp-desc p:before {
+	counter-increment: list;
+	content: counter(list)".";
+    position: absolute;
+    top: 0px;
+    left: -17px;
+}
+.rasp-desc p span {
+    font-weight: 500;
+}
+.prep-r {
+    /*margin: 16px 0px 16px;*/
+    display: none;
+}
+.r-sea {
+    color: #294099;
+    font-size: 14px;
+}
+.prep-r input {
+	width: auto;
+	flex-grow: 1;
+	margin-left: 16px;
+    color: #000;
+}
+.mb32 {
+    margin-bottom: 32px;
+}
+.opac {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer;
+    max-width: 260px;
+}
+.datepicker--day-name {
+    color: #294099 !important;
+}
+
+.preload {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    background: url(preload.gif) no-repeat center rgba(255, 255, 255, 0.9);
+    z-index: 100;
+}
+
+.icalendar {
+    top: 70px;
+    position: absolute;
+    right: 0px;
+}
+
+@media (max-width: 950px) {
+.r-filtr {
+	justify-content: space-between;
+	padding: 16px 0px 20px;
+}
+.r-filtr label {
+	max-width: initial;
+}
+.r-filtr label:last-child {
+	/*margin-right: 20px;*/
+}
+.rasp-tab {
+    width: 100%;
+}
+.rasp-tab span {
+	font-size: 16px;
+	margin-right: 20px;
+	padding: 5px 9px;
+	min-width: 164px;
+}
+.datepicker-rasp {
+	min-width: 158px;
+	flex-shrink: 1;
+    margin-top: 20px;
+}
+.rasp-item-inner {
+	padding: 10px 16px 16px 32px;
+}
+.para-time {
+	font-size: 20px;
+	padding-right: 40px;
+}
+.rasp-desc {
+    flex-shrink: 1;
+}
+}
+@media (max-width: 650px) {
+    .rasp-para {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 16px;
+    }
+    .icalendar_link {
+        margin-bottom: 44px;
+    }
+    .icalendar {
+        top: 64px !important;
+        position: absolute !important;
+        right: auto !important;
+        left: 0px;
+    }
+}
+@media (max-width: 460px) {
+.r-filtr label {
+	/*max-width: initial;
+	width: 100%;
+	margin-right: 0px;*/
+}
+.rasp-tab {
+    justify-content: space-between;
+}
+.rasp-tab span {
+	margin-right: 0px;
+    margin-bottom: 10px;
+    min-width: calc(50% - 5px);
+    width: calc(50% - 5px);
+    padding: 5px 0px;
+}
+.datepicker-rasp {
+	margin-top: 10px;
+	width: 100%;
+	display: block;
+}
+.r-filtr {
+	padding: 0px 0px 20px;
+}
+.r-filtr label > span {
+	font-size: 13px;
+}
+.rasp-zag {
+	font-size: 18px;
+	line-height: 20px;
+}
+.rasp-list {
+	padding: 10px 0px;
+}
+.rasp-week {
+	width: 40px;
+	font-size: 18px;
+	padding: 8px 10px;
+	min-height: 50px;
+}
+.rasp-item-inner {
+	width: calc(100% - 40px);
+	padding: 10px 16px 16px 24px;
+}
+.para-time {
+	font-size: 13px;
+	padding-right: 0px;
+    margin-bottom: 0px;
+}
+.dat {
+    order: -1;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+.jq-selectbox__select-text {
+    color: #889291;
+    opacity: 1;
+    font-size: 13px;
+}
+.changed .jq-selectbox__select-text {
+    color: #2b2a29;
+    font-size: 17.5px;
+}
+.r-filtr .jq-selectbox__select {
+    height: 46px;
+}
+.jq-selectbox__select-text {
+	display: flex !important;
+	height: 46px;
+	align-items: center;
+}
+.r-filtr .jq-selectbox__trigger-arrow {
+	top: 17px;
+}
+.rasp-zag br {
+    display: block;
+}
+.rasp-day {
+	font-size: 16px;
+	font-weight: 400;
+}
+.rasp-desc {
+	margin-left: 17px;
+}
+.rasp-desc p {
+	font-size: 12px;
+	line-height: 14px;
+}
+.rasp-desc p span {
+	font-size: 10px;
+	line-height: 10px;
+}
+.rasp-para {
+	margin-bottom: 32px;
+}
+.rasp-para:last-child {
+	margin-bottom: 32px;
+}
+.prep-r input {
+    font-size: 17px;
+    margin-left: 0px;
+}
+.prep-r input::placeholder {
+    font-size: 13px;
+}
+.r-sea {
+	font-size: 13px;
+	width: 100%;
+}
+.icalendar_link {
+	margin-bottom: 24px;
+}
+
+}
+@media print {
+body > .contain-wrapper, body > .footer, body .section-header, body .rasp-tab, body .dat, body .r-filtr, body .sidebar-list, body .pechat, body .icalendar_link {
+    display: none !important;
+}
+}
+
+/*demoexam
+.bodyclass.demoexam .leftcolumn,.bodyclass.demoexam .leftcolumn,.bodyclass.demoexam .rightcolumn,.bodyclass.demoexam a.langversion-button,.bodyclass.demoexam .uspu-main-block,.bodyclass.demoexam .footer{display:none;}
+
+.bodyclass.demoexam{background-image: url(/education/eios/schedule/demobackgr.png);background-repeat: no-repeat;background-attachment: fixed;background-position: top;padding: 0;background-size: cover;}
+.bodyclass.demoexam .category-header, .bodyclass.demoexam .infoblock-header a {background: #00ACD3!important;}
+.bodyclass.demoexam .rasp-tab span:hover, .bodyclass.demoexam .rasp-tab span.selected{background: #00ACD3;color: #fff;}
+.bodyclass.demoexam .rasp-week {background: #00ACD3;}
+.bodyclass.demoexam .rasp-tab span,.bodyclass.demoexam .rasp-zag,.bodyclass.demoexam .rasp-item-inner,.bodyclass.demoexam .rasp-day,.bodyclass.demoexam .r-filtr label > span{color: #231F20;}
+.bodyclass.demoexam .datepicker-rasp {background: #00ACD3;color: #fff;}
+.bodyclass.demoexam .rasp-update{color: #777;}
+end demoexam*/
