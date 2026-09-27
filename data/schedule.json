@@ -2,7 +2,7 @@
   "group": "ОЛИ-2431",
   "period": "Расписание c 28 сентября по 21 октября",
   "updated_on_site": "Расписание обновлено 25.09.2026 в 20:36:07",
-  "generated_at": "2026-09-27 11:35:47",
+  "generated_at": "2026-09-27 12:50:30",
   "days": [
     {
       "date": "28 сентября",
@@ -491,7 +491,7 @@
         {
           "time": "08:30 - 10:00",
           "subject": "Производственная практика (Педагогическая (классное руководство) практика) (Лекции)",
-          "subject_en": null,
+          "subject_en": "Work Placement (Pedagogical Placement – Classroom Management) (Lecture)",
           "room": "Учебная аудитория 119 ГУК",
           "teacher": "Тенкачева Татьяна Рашитовна",
           "group": "ОЛИ-2431"
@@ -506,7 +506,7 @@
         {
           "time": "16:00 - 17:30",
           "subject": "Производственная практика (Педагогическая (классное руководство) практика) (Групповые занятия по ПП)",
-          "subject_en": null,
+          "subject_en": "Work Placement (Pedagogical Placement – Classroom Management) (Group placement session)",
           "room": "Учебная аудитория 119 ГУК",
           "teacher": "Тенкачева Татьяна Рашитовна",
           "group": "ОЛИ-2431"
@@ -514,7 +514,7 @@
         {
           "time": "17:45 - 19:15",
           "subject": "Производственная практика (Педагогическая (классное руководство) практика) (Групповые занятия по ПП)",
-          "subject_en": null,
+          "subject_en": "Work Placement (Pedagogical Placement – Classroom Management) (Group placement session)",
           "room": "Учебная аудитория 119 ГУК",
           "teacher": "Тенкачева Татьяна Рашитовна",
           "group": "ОЛИ-2431"

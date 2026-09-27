@@ -124,6 +124,7 @@ LESSON_TYPE_EN = {
     "Лекции": "Lecture",
     "Практ.зан-я": "Practical class",
     "Лаб.зан-я": "Lab class",
+    "Групповые занятия по ПП": "Group placement session",
 }
 
 # Название предмета (без типа занятия) -> перевод на английский.
@@ -161,6 +162,8 @@ SUBJECT_EN = {
     "Технология и организация воспитательных практик (классное руководство)":
         "Technology and Organization of Educational Practices "
         "(Classroom Management)",
+    "Производственная практика (Педагогическая (классное руководство) практика)":
+        "Work Placement (Pedagogical Placement \u2013 Classroom Management)",
 }
 
 
@@ -354,16 +357,17 @@ def parse_schedule(html: str) -> dict:
 # ---------------------------------------------------------------------------
 # HTML: сетка недель (Пн-Сб)
 # ---------------------------------------------------------------------------
-GRID_HEAD_CELL = '<div class="g-head">{label}</div>'
+GRID_HEAD_CELL = """<div class="g-head">
+  <div class="g-head-day">{weekday}</div>
+  <div class="g-head-date">{date_label}</div>
+</div>"""
 
 GRID_LESSON = """<div class="g-lesson">
   <div class="g-time">{time}{note}</div>
   <div class="g-subject">{subject}</div>
-  <div class="g-info">{room}{teacher_line}</div>
 </div>"""
 
 GRID_CELL = """<div class="g-cell">
-  <div class="g-date">{weekday} · {date_label}</div>
   {body}
 </div>"""
 
@@ -378,7 +382,7 @@ def build_week_tables(days_by_date, weekday_labels, weekday_short, date_fmt,
                        no_class_text, lesson_fields):
     """days_by_date: {date: [lesson,...]} (списки уже в нужном для
     отображения виде — переведённые/сдвинутые, если нужно).
-    lesson_fields(lesson) -> (time, note_html, subject, room, teacher_line)
+    lesson_fields(lesson) -> (time, note_html, subject)
     Возвращает готовый HTML со всеми week-table блоками."""
     if not days_by_date:
         return '<p style="text-align:center;color:var(--muted)">Расписание не найдено.</p>'
@@ -390,27 +394,25 @@ def build_week_tables(days_by_date, weekday_labels, weekday_short, date_fmt,
     tables = []
     cur_monday = monday0
     while cur_monday <= end:
-        cells = [GRID_HEAD_CELL.format(label=lbl) for lbl in weekday_labels]
+        head_cells = []
+        day_cells = []
         for i in range(6):
             cell_date = cur_monday + timedelta(days=i)
+            head_cells.append(GRID_HEAD_CELL.format(
+                weekday=weekday_short[i],
+                date_label=date_fmt(cell_date),
+            ))
             lessons = days_by_date.get(cell_date, [])
             if lessons:
                 body = "\n".join(
-                    GRID_LESSON.format(
-                        time=t, note=note, subject=subj, room=room,
-                        teacher_line=teacher_line,
-                    )
-                    for (t, note, subj, room, teacher_line) in
+                    GRID_LESSON.format(time=t, note=note, subject=subj)
+                    for (t, note, subj) in
                     (lesson_fields(l) for l in lessons)
                 )
             else:
-                body = ""
-            cells.append(GRID_CELL.format(
-                weekday=weekday_short[i],
-                date_label=date_fmt(cell_date),
-                body=body,
-            ))
-        tables.append(WEEK_TABLE.format(cells="\n".join(cells)))
+                body = f'<div class="g-empty">{no_class_text}</div>'
+            day_cells.append(GRID_CELL.format(body=body))
+        tables.append(WEEK_TABLE.format(cells="\n".join(head_cells + day_cells)))
         cur_monday += timedelta(days=7)
 
     return "\n".join(tables)
@@ -433,12 +435,11 @@ def build_ru_en_grids(data):
         ru_by_date.setdefault(d, []).extend(day["lessons"])
 
     def ru_fields(l):
-        teacher_line = f"<br>{l['teacher']}" if l["teacher"] else ""
-        return (l["time"], "", l["subject"], l["room"], teacher_line)
+        return (l["time"], "", l["subject"])
 
     ru_html = build_week_tables(
         ru_by_date, WEEKDAY_RU, WEEKDAY_RU_SHORT, format_date_ru,
-        "Занятий нет", ru_fields,
+        "Day just for us", ru_fields,
     )
 
     # EN: время сдвинуто на BRAZIL_HOURS_OFFSET часов, предмет — перевод
@@ -450,12 +451,11 @@ def build_ru_en_grids(data):
         shifted, crossed = shift_time_range(l["time"], BRAZIL_HOURS_OFFSET)
         note = ' <span class="g-daynote">(prev. day)</span>' if crossed else ""
         subject = l.get("subject_en") or l["subject"]
-        teacher_line = f"<br>{l['teacher']}" if l["teacher"] else ""
-        return (shifted, note, subject, l["room"], teacher_line)
+        return (shifted, note, subject)
 
     en_html = build_week_tables(
         ru_by_date, WEEKDAY_EN, WEEKDAY_EN_SHORT, format_date_en,
-        "No classes", en_fields,
+        "Day just for us", en_fields,
     )
 
     return ru_html, en_html, warnings
@@ -546,10 +546,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     background: linear-gradient(165deg, var(--primary), var(--primary-dark));
     color: #fff;
     text-align: center;
-    font-weight: 600;
-    font-size: 13px;
     padding: 10px 6px;
   }}
+  .g-head-day {{ font-weight: 700; font-size: 13px; }}
+  .g-head-date {{ font-weight: 500; font-size: 11px; opacity: 0.9; margin-top: 2px; }}
   .g-cell {{
     border-top: 1px solid #f1e6ee;
     border-left: 1px solid #f1e6ee;
@@ -557,7 +557,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     min-height: 60px;
   }}
   .week-table > :nth-child(6n+1) {{ border-left: none; }}
-  .g-date {{ font-size: 12px; color: var(--muted); font-weight: 700; margin-bottom: 8px; }}
   .g-lesson {{ margin-bottom: 10px; }}
   .g-lesson:last-child {{ margin-bottom: 0; }}
   .g-time {{ font-size: 12px; color: var(--primary); font-weight: 600; }}
