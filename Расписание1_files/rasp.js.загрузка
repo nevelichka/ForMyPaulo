@@ -1,0 +1,268 @@
+(function ($) {
+    $(function () {
+        $('select').styler({
+            selectSearch: true,
+            onSelectOpened: function () {
+                plasli = setInterval(function () {
+                    $('.prep-r .jq-selectbox__search input').focus();
+                    $('.stud-r .jq-selectbox__search input').focus();
+                }, 100)
+            }
+        });
+    });
+})(jQuery);
+
+$(function () {
+    $('.prep').click(function () {
+        $(this).addClass('selected');
+        $('.stud').removeClass('selected');
+        $('.stud-r').fadeOut(200, function () {
+            $('.prep-r').fadeIn(200, function () {updateURL()});
+        });
+    });
+    $('.stud').click(function () {
+        $(this).addClass('selected');
+        $('.prep').removeClass('selected');
+        $('.prep-r').fadeOut(200, function () {
+            $('.stud-r').fadeIn(200, function () {updateURL()});
+        });
+    });
+
+    $(document).on('click', '.pechat', function () {
+        window.print();
+    });
+    $(document).on('click', '.prep-r .jq-selectbox__select', function () {
+
+    });
+
+    function loadRasp(url, data, raspEl, kabEl = null, hideLoader = false) {
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: data,
+            success: function (msg) {
+                if($(msg).find('div#kabOptions').length){
+                    kabEl.html($(msg).find('div#kabOptions').html());
+                    setTimeout(function() {kabEl.trigger('refresh');  }, 1);
+                    tmpEl = $(msg);
+                    tmpEl.find('div#kabOptions').remove();
+                    msg = $(tmpEl).html(function(idx, str){return str})
+                }
+                raspEl.html(msg);
+                if (hideLoader){
+                    $('.preload').hide();
+                }
+            }
+        });
+    }
+
+    function loadGroupRasp(group_name, paramUrl = ''){
+        $('.rasp-list-group .rasp-item-inner').html('');
+        if(group_name && group_name.length){
+            $('.rasp-zag-group').html('Группа ' + group_name);
+        }
+        if(!paramUrl.length){
+            paramUrl = getParamsFromEl();
+        }
+        loadRasp("/ajax/icalendar.php", "group_name=" + group_name, $('.icalendar_link'));
+        loadRasp("/ajax/rasp.php", paramUrl, $('.rasp-list-group'), $('select[name="kab_stud"]'), true);
+    }
+
+    function loadTeacherRasp(teacher_name, paramUrl = ''){
+        $('.rasp-list-teacher .rasp-item-inner').html('');
+        if(!paramUrl.length){
+            paramUrl = getParamsFromEl();
+        }
+        loadRasp("/ajax/icalendar.php", "teacher_name=" + teacher_name, $('.icalendar_link'));
+        loadRasp("/ajax/rasp_teacher.php", paramUrl, $('.rasp-list-teacher'), $('select[name="kab_prep"]'), true);
+    }
+
+    function getParamsFromUrl() {
+        return window.location.search.replace('?','').split('&').reduce(
+            function(p,e){
+                var a = e.split('=');
+                p[ decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+                return p;
+            },
+            {}
+        );
+    }
+
+    function getParamsFromEl() {
+        paramUrl = '';
+        let tmpParamsObj = {};
+        let tmpParamsArr = [];
+        if($('.stud-r').is(':visible')){
+            if($('select[name="group_name"]').val()){
+                tmpParamsObj.group_name = $('select[name="group_name"]').val();
+            }
+            if($('select[name="kab_stud"]').val() && $('select[name="kab_stud"]').val() != '-1'){
+                tmpParamsObj.kab_stud = $('select[name="kab_stud"]').val();
+            }
+            if($('input[name="exam_stud"]').is(':checked')){
+                tmpParamsObj.exam_stud = true;
+            }
+        }else if($('.prep-r').is(':visible')){
+            if($('select[name="teacher_search"]').val()){
+                // paramUrl = 'teacher_name=' + $('select[name="teacher_search"]').val();
+                tmpParamsObj.teacher_name = $('select[name="teacher_search"]').val();
+            }
+            if($('select[name="kab_prep"]').val() && $('select[name="kab_prep"]').val() != '-1'){
+                // paramUrl += '&kab_prep=' + $('select[name="kab_prep"]').val();
+                tmpParamsObj.kab_prep = $('select[name="kab_prep"]').val();
+            }
+            if($('input[name="exam_prep"]').is(':checked')){
+                // paramUrl += '&exam_prep=true';
+                tmpParamsObj.exam_prep = true;
+            }
+        }
+        Object.entries(tmpParamsObj).forEach(el=>tmpParamsArr.push(el.join('=')));
+        if(tmpParamsArr.length){
+            paramUrl = tmpParamsArr.join('&');
+        }
+
+        console.log(paramUrl);
+        return paramUrl;
+    }
+
+    function setStyle(){
+        if($('.stud-r').is(':visible')){
+            if($('input[name="exam_stud"]').is(':checked')){
+                $('div.bodyclass').addClass('demoexam');
+                document.title = 'Расписание экзаменов';
+                $('h1.category-header').html('Расписание экзаменов');
+            }else{
+                $('div.bodyclass').removeClass('demoexam');
+                document.title = 'Расписание занятий';
+                $('h1.category-header').html('Расписание занятий');
+            }
+        }else if($('.prep-r').is(':visible')){
+            if($('input[name="exam_prep"]').is(':checked')){
+                $('div.bodyclass').addClass('demoexam');
+                document.title = 'Расписание экзаменов';
+                $('h1.category-header').html('Расписание экзаменов');
+            }else{
+                $('div.bodyclass').removeClass('demoexam');
+                document.title = 'Расписание занятий';
+                $('h1.category-header').html('Расписание занятий');
+            }
+        }
+    }
+
+    $(function() {
+  var loc = window.location.href; // returns the full URL
+  if(/exam_stud/.test(loc)) {
+    $('.bodyclass').addClass('demoexam');
+    $('h1.category-header').html('Расписание экзаменов');
+  }
+});
+
+    function updateURL(paramUrl = '') {
+        if (history.pushState) {
+            var baseUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            paramUrl = getParamsFromEl();
+            // console.log(paramUrl);
+            paramUrl = (paramUrl)?('?'+paramUrl):'';
+            var newUrl = baseUrl + paramUrl;
+            history.pushState(null, null, newUrl);
+        } else {
+            console.warn('History API не поддерживается');
+        }
+    }
+
+    // let params = getParamsFromUrl();
+
+    paramUrl = getParamsFromEl();
+    console.log(paramUrl);
+
+    if($('.stud-r').is(':visible')){
+        if(paramUrl.length){
+            loadGroupRasp('', paramUrl);
+        }else{
+            $('.preload').hide();
+        }
+    }else if($('.prep-r').is(':visible')){
+        if(paramUrl.length){
+            loadTeacherRasp('', paramUrl);
+        }else{
+            $('.preload').hide();
+        }
+    }
+
+    // if('group_name' in params && params['group_name']){
+    //     loadGroupRasp(params['group_name'], params['kab_stud'], params['exam_stud']);
+    // }else if('teacher_name' in params && params['teacher_name']){
+    //     loadTeacherRasp(params['teacher_name'], params['kab_prep'], params['exam_prep']);
+    // }else{
+    //     $('.preload').hide();
+    // }
+
+    $('select[name="group_name"]').on('change', function () {
+        $('.preload').show();
+        loadGroupRasp($(this).val());
+        $('select[name="kab_stud"]').prop('disabled', false);
+        setTimeout(function() {$('select[name="kab_stud"]').trigger('refresh');  }, 1);
+        $('input[name="exam_stud"]').prop('disabled', false);
+        setTimeout(function() {$('input[name="exam_stud"]').trigger('refresh');  }, 1);
+        updateURL();
+    });
+
+    $('select[name="kab_stud"]').on('change', function () {
+        $('.preload').show();
+        loadGroupRasp($('select[name="group_name"]').val());
+        updateURL();
+    });
+
+    $('input[name="exam_stud"]').on('click', function () {
+        $('.preload').show();
+        loadGroupRasp($('select[name="group_name"]').val());
+        setStyle();
+        updateURL();
+    });
+
+    $('select[name="teacher_search"]').on('change', function () {
+        $('.preload').show();
+        loadTeacherRasp($(this).val());
+        $('select[name="kab_prep"]').prop('disabled', false);
+        setTimeout(function() {$('select[name="kab_prep"]').trigger('refresh');  }, 1);
+        $('input[name="exam_prep"]').prop('disabled', false);
+        setTimeout(function() {$('input[name="exam_prep"]').trigger('refresh');  }, 1);
+        updateURL();
+    });
+
+    $('select[name="kab_prep"]').on('change', function () {
+        $('.preload').show();
+        loadTeacherRasp($('select[name="teacher_search"]').val());
+        updateURL();
+    });
+
+    $('input[name="exam_prep"]').on('click', function () {
+        $('.preload').show();
+        loadTeacherRasp($('select[name="teacher_search"]').val());
+        setStyle();
+        updateURL();
+    });
+
+    $('.datepicker-here').datepicker({
+        onHide: function (dp, animationCompleted) {
+            $('.preload').show();
+            if ($('select[name="group_name"]').val()) {
+                $('.rasp-zag-group').html('Группа ' + $('select[name="group_name"]').val());
+            }
+            if ($('select[name="teacher_name"]').val()) {
+                //$('.rasp-zag-teacher').html('<?=$teacher_name?>');
+            }
+            if ($('.prep-r').css('display') == "none") {
+                $('.rasp-list-group .rasp-item-inner').html('');
+                data = "group_name=" + $('select[name="group_name"]').val() + "&date=" + $('.datepicker-here').val();
+                loadRasp("/ajax/icalendar.php", data, $('.icalendar_link'));
+                loadRasp("/ajax/rasp.php", data, $('.rasp-list-group'), $('select[name="kab_stud"]'), true);
+            } else {
+                $('.rasp-list-teacher .rasp-item-inner').html('');
+                data = "teacher_name=" + $('select[name="teacher_search"]').val() + "&date=" + $('.datepicker-here').val();
+                loadRasp("/ajax/icalendar.php", data, $('.icalendar_link'));
+                loadRasp("/ajax/rasp_teacher.php", data, $('.rasp-list-teacher'), $('select[name="kab_prep"]'),  true);
+            }
+        }
+    });
+});

@@ -1,0 +1,112 @@
+(function () {
+
+    if (typeof BX === 'undefined' || typeof BX.ajax === 'undefined' || window.tmrInited) {
+        return;
+    }
+
+    window.tmrInited = true;
+
+    let hasActiveRequest = false;
+
+
+    BX.ready(function () {
+        requestTrackerActions(true);
+
+        if (typeof jQuery === 'function') {
+            jQuery(document).on('ajaxSuccess', function (r) {
+                if (hasActions()) {
+                    requestTrackerActions();
+                }
+            });
+        }
+
+
+        BX.addCustomEvent('onAjaxSuccess', function (oResponse, r2, r3) {
+            //if (typeof oResponse !== 'undefined' && oResponse && !oResponse.ecActions && oResponse.status !== 'error') {
+            if (hasActions()) {
+                requestTrackerActions();
+            }
+            //}
+        });
+    });
+
+    function requestTrackerActions(processInstant) {
+        if (hasActiveRequest) {
+            return;
+        }
+
+        hasActiveRequest = true;
+        BX.ajax.runAction('vkteam:tracker.vkteam_tracker.Ajax.getTrackerActions')
+            .then(function (oResponse) {
+                if (oResponse.status === 'success') {
+                    if (typeof oResponse.data.actions !== 'undefined') {
+                        const actions = oResponse.data.actions;
+                        const actionsIds = Object.keys(actions);
+                        if (processInstant) {
+                            processActions(actions);
+                            removeSentActions(actionsIds);
+                            hasActiveRequest = false;
+                        } else {
+                            setTimeout(function () {
+                                processActions(actions);
+                                removeSentActions(actionsIds);
+                                hasActiveRequest = false;
+                            }, 2000);
+                        }
+                    }
+                }
+
+                oResponse.ecActions = true;
+                return oResponse;
+            }, function (oResponse) {
+                oResponse.ecActions = true;
+                hasActiveRequest = false;
+                return oResponse;
+            });
+    }
+
+    function processActions(actions) {
+        let formSended = false;
+
+        for (let id in actions) {
+
+            let action = actions[id];
+
+            let data = {
+                id: action['counter'],
+                type: 'reachGoal',
+                goal: action['goal'],
+            };
+            if (action['userid']) {
+                data['userid'] = action['userid'];
+            }
+            //console.log(data);
+            _tmr.push(data);
+        }
+    }
+
+    function removeSentActions(actionsIds) {
+        BX.ajax.runAction('vkteam:tracker.vkteam_tracker.Ajax.removeTrackerActions', {
+            data: {
+                'actionsIds': actionsIds
+            }
+        })
+            .then(function (oResponse) {
+                oResponse.ecActions = true;
+                return oResponse;
+            }, function (oResponse) {
+                oResponse.ecActions = true;
+                return oResponse;
+            });
+
+        BX.setCookie('tmr_has_actions', '', {
+            expires: -1000,
+            path: '/'
+        });
+    }
+
+    function hasActions() {
+        return BX.getCookie('tmr_has_actions');
+    }
+
+})();
